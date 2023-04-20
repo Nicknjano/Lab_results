@@ -1,26 +1,4 @@
-"""Routing for survey application
 
-This file consists of URL routes for the survey application.
-The application is a Single Page Application(SPA) with 5 views.
-
-About:
------
-About page briefly explains the goal and features of the project.
-
-Surveys:
---------
-This page lists all the available surveys created by the admin.
-Each survey can be interacted with and on click routes to survey details page.
-
-Survey Details:
----------------
-This page renders a form with the questionnaire for the survey.
-Each question has atleast two choices and are radio inputs.
-
-Survey Submit Success:
-----------------------
-This is the success landing page for successful submission of the survey.
-"""
 
 from django.urls import path
 from . import views

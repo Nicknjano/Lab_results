@@ -1,5 +1,4 @@
-<!-- Copy of admin/base.html with some overrides and customizations -->
-<!-- https://github.com/django/django/blob/master/django/contrib/admin/templates/admin/base.html -->
+
 {% load i18n static %}<!DOCTYPE html>
 {% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
 <html lang="{{ LANGUAGE_CODE|default:"en-us" }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr,auto' }}">
@@ -107,15 +106,12 @@
           <!-- The path check is to render the widget only when the user is logged in as admin -->
           {% if "login" not in request.path and "logout" not in request.path %}
               {% block stats_content %}
-                  <div class="app-survey-stats module">
+          
+              <div class="app-survey-stats module">
                     <table class="survey-stats-table">
                       <caption class="section">
                         Survey Statistics
                       </caption>
-                      <tr class="model-stats current-model">
-                          <th scope="row">Popular Survey</th>
-                          <td ><a href="#" id="popular-survey">No Surveys Found</a></td>
-                      </tr>
                       <tr class="model-stats current-model">
                           <th scope="row" colspan="2">Statistics by Survey</th>
                       </tr>
