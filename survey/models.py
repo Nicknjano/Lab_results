@@ -1,39 +1,3 @@
-"""Python Database API
-
-Django DB Models can be used to create schemas for database entities
-which will then be used to create the physical database.
-
-Models:
--------
-Survey:
-Survey entity encapsulates basic attributes of a survey including
-name(survey name) and published_on(date time when the survey is published.
-Methods:
-    __str__: returns the survey name as metadata reference when objects are accessed.
-    was_published_recently: returns True if the survey was published in the last 24h.
-                            The callback is also used by the admin for filtering surveys.
-
-Participant:
-This entity helps keep track of number of successful survey submits. This entity is used
-to identify the popular survey i.e., the survey with most submissions.
-The attributes include survey(foreign key referencing Survey) and participation_datetime.
-Methods:
-    __str__: returns the Participant name as metadata reference when objects are accessed.
-
-Question:
-This entity encapsulates a question in the survey with survey(foreign key referencing Survey),
-question_text(actual question text) and created_on.
-Methods:
-    __str__: returns the Question name as metadata reference when objects are accessed.
-
-Choice:
-This entity encapsulates a choice attribute in the survey with Question(foreign key referencing Question),
-choice_text(actual choice text), votes(to store poll results) and created_on.
-Methods:
-    __str__: returns the Choice name as metadata reference when objects are accessed.
-
-"""
-
 from django.db import models
 from django.utils import timezone
 import datetime
