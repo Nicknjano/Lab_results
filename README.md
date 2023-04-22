@@ -1,9 +1,5 @@
 ## Features:
  - The polls application is extended to a survey where admin can create multiple surveys with multiple questions and choices for each question.
- - The dashboard is enriched with a statistics widget. The widget displays the popular survey among the surveys and the bar chart visualization of vote distributions among different choices for a question.
- - The application is a SPA with 5 Views on the Users App and a dashboard for the administrator. Partial Views are implemented with a custom middleware view 'index' which further routes URL requests.
- - Created two REST endpoints and used them from admin through AJAX calls.
- 
 ## Installation and Launching the application
 
 ### Requirements:
